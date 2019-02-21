@@ -1,0 +1,10 @@
+version: '3'
+services:
+    web:
+        build: .
+        command: npm run start
+        ports:
+            - "8000:80"
+        volumes:
+            - .:/worker/
+            - /app/node_modules
